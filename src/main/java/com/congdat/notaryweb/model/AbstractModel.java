@@ -9,7 +9,7 @@ import java.sql.Date;
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 @Data
-abstract class BaseModel {
+abstract class AbstractModel {
 
 		@Id
 		@GeneratedValue(strategy = GenerationType.AUTO)

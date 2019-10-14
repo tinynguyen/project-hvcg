@@ -8,9 +8,9 @@ public interface CategoryService {
 
 		List<Category> findAll();
 
-		Category save(Category category);
+		Category save(Category category, String username);
 
-		Category update(Category category, long id);
+		Category update(Category category, Long id, String username);
 
-		void delete(long id);
+		boolean delete(Long id);
 }

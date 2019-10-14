@@ -9,9 +9,9 @@ public interface RoleService {
 
 		List<Role> findAll();
 
-		Role save(Role Role);
+		Role save(Role Role, String username);
 
-		Role update(Role Role, long id);
+		Role update(Role Role, Long id, String username);
 
-		void delete(long id);
+		boolean delete(Long id);
 }

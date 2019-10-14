@@ -10,8 +10,8 @@ public interface NewsService {
 
 		News save(News news, String username);
 
-		News update(News news, long newsId, String username);
+		News update(News news, Long newsId, String username);
 
-		void delete(long id);
+		boolean delete(Long id);
 
 }

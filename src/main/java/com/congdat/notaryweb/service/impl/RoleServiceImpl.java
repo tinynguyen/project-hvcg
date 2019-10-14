@@ -26,24 +26,32 @@ public class RoleServiceImpl implements RoleService {
 		}
 
 		@Override
-		public Role save(Role role) {
+		public Role save(Role role, String username) {
+				role.setCreatedDate(new Date(System.currentTimeMillis()));
+				role.setCreatedBy(username);
 				return roleRepository.save(role);
 		}
 
 		@Override
-		public Role update(Role role, long id) {
-				Role foundRole = roleRepository.getOne(id);
+		public Role update(Role role, Long id, String username) {
+				Role foundRole = roleRepository.findById(id).orElse(null);
 				if (foundRole == null) {
 						return null;
 				}
 				foundRole.setName(role.getName());
 				foundRole.setRole(role.getRole());
 				foundRole.setModifiedDate(new Date(System.currentTimeMillis()));
-				return role;
+				foundRole.setModifiedBy(username);
+				return roleRepository.save(foundRole);
 		}
 
 		@Override
-		public void delete(long id) {
+		public boolean delete(Long id) {
+				Role foundCategory = roleRepository.findById(id).orElse(null);
+				if (foundCategory == null) {
+						return false;
+				}
 				roleRepository.deleteById(id);
+				return true;
 		}
 }

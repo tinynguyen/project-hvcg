@@ -19,7 +19,7 @@ import java.util.List;
 @JsonIdentityInfo(
 								generator = ObjectIdGenerators.PropertyGenerator.class,
 								property = "id")
-public class News extends BaseModel {
+public class News extends AbstractModel {
 
 		@Column(name = "title", nullable = false)
 		private String title;

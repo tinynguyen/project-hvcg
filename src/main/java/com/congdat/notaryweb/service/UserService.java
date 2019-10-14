@@ -8,9 +8,9 @@ public interface UserService {
 
 		List<User> findAll();
 
-		User save(User user);
+		User save(User user, Long roleId);
 
-		User update(User user, long id);
+		User update(User user, Long userId);
 
-		User delete(long id);
+		boolean delete(Long id);
 }

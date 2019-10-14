@@ -20,7 +20,7 @@ import java.util.List;
 @JsonIdentityInfo(
 								generator = ObjectIdGenerators.PropertyGenerator.class,
 								property = "id")
-public class Role extends BaseModel {
+public class Role extends AbstractModel {
 
 		@Column(name = "name", nullable = false)
 		private String name;
