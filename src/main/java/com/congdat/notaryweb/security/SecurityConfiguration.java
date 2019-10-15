@@ -33,7 +33,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 												// create 1 endpoint, allow all access -> to login -> and return JWT token :D
 //												.addFilterAfter(new JWTAuthentication(), UsernamePasswordAuthenticationFilter.class)
 												.authorizeRequests()
-												.antMatchers("/").hasAnyRole("ROLE_USER")
+												.antMatchers("/**").hasAnyRole("USER", "ADMIN")
 												.anyRequest().authenticated()
 												.and()
 												.httpBasic();

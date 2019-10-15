@@ -2,51 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6042bf68-b713-4d65-b0a2-4c0df89039ec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/api/AbstractApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/api/CategoryApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/api/NewsApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/api/NewsApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/api/RoleApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/api/RoleApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/api/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/api/UserApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/model/BaseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/model/AbstractModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/model/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/model/Like.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/model/Like.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/model/News.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/model/News.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/model/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/security/JWTAuthentication.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/security/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/security/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/service/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/service/NewsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/service/NewsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/service/RoleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/service/impl/CategoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/service/impl/NewsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/service/impl/NewsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/service/impl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/service/impl/RoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/congdat/notaryweb/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/NotaryWeb.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/com.congdat.notaryweb/NotaryWeb/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/com.congdat.notaryweb/NotaryWeb/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/api/NewsApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/api/NewsApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/api/RoleApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/api/RoleApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/api/UserApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/api/UserApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/model/BaseModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/model/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/model/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/model/Like.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/model/Like.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/model/News.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/model/News.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/model/Role.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/model/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/security/SecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/security/SecurityConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/service/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/service/CategoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/service/NewsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/service/NewsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/service/RoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/service/RoleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/service/impl/CategoryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/service/impl/CategoryServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/service/impl/NewsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/service/impl/NewsServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/service/impl/RoleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/service/impl/RoleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/congdat/notaryweb/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/NotaryWeb.kotlin_module" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -271,7 +229,9 @@
       <workItem from="1571009442384" duration="17000" />
       <workItem from="1571009498346" duration="2192000" />
       <workItem from="1571011740506" duration="204000" />
-      <workItem from="1571011993962" duration="8256000" />
+      <workItem from="1571011993962" duration="8950000" />
+      <workItem from="1571039995599" duration="8000" />
+      <workItem from="1571107207697" duration="1698000" />
     </task>
     <servers />
   </component>
