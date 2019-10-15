@@ -36,6 +36,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 												.antMatchers("/").hasAnyRole("ROLE_USER")
 												.anyRequest().authenticated()
 												.and()
-												.httpBasic().disable();
+												.httpBasic();
 		}
 }

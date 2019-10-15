@@ -6,8 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.PostConstruct;
-
 @RestController
 @RequestMapping(value = "/api/v1/user")
 public class UserApi {
@@ -16,24 +14,32 @@ public class UserApi {
 		private UserService userService;
 
 		@GetMapping
-		@PostConstruct
-		ResponseEntity findAll() {
+		public ResponseEntity findAll() {
 				return ResponseEntity.ok(userService.findAll());
 		}
 
 		@PostMapping
-		ResponseEntity save(@RequestBody User user) {
-				return ResponseEntity.ok(userService.save(user));
+		public ResponseEntity save(@RequestBody User user, @RequestParam(name = "id") Long roleId) {
+				return ResponseEntity.ok(userService.save(user, roleId));
 		}
 
 		@PutMapping(value = "/{id}")
-		ResponseEntity update(@RequestBody User user, @PathVariable long id) {
-					return ResponseEntity.ok(userService.update(user, id));
+		public ResponseEntity update(@RequestBody User user,
+																															@PathVariable(name = "id") Long userId) {
+				if (userService.update(user, userId) == null) {
+						return ResponseEntity.badRequest().body("Can't find user by id: " + userId);
+				}
+				return ResponseEntity.ok(userService.update(user, userId));
 		}
 
 		@DeleteMapping(value = "/{id}")
-		ResponseEntity delete(@PathVariable long id) {
-				return ResponseEntity.ok(userService.delete(id));
+		public ResponseEntity delete(@PathVariable(name = "id") Long userId) {
+				if (!userService.delete(userId)) {
+						return ResponseEntity.badRequest().body("Can't find user by id: " + userId);
+				}
+				userService.delete(userId);
+				return ResponseEntity.ok().body("User id: " + userId + " was deleted");
 		}
+
 
 }

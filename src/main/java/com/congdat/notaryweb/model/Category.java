@@ -10,7 +10,6 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import java.util.List;
-import java.util.Set;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
@@ -18,7 +17,7 @@ import java.util.Set;
 @AllArgsConstructor
 @Entity
 @Table(name = "categories")
-public class Category extends BaseModel {
+public class Category extends AbstractModel {
 
 		@Column(name = "name", nullable = false)
 		private String name;

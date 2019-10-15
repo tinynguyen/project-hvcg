@@ -24,12 +24,14 @@ public class CategoryServiceImpl implements CategoryService {
 		}
 
 		@Override
-		public Category save(Category category) {
+		public Category save(Category category, String username) {
+				category.setCreatedDate(new Date(System.currentTimeMillis()));
+				category.setCreatedBy(username);
 				return categoryRepository.save(category);
 		}
 
 		@Override
-		public Category update(Category category, long id) {
+		public Category update(Category category, Long id, String username) {
 				Category foundCategory = categoryRepository.findById(id).orElse(null);
 				if (foundCategory == null) {
 						return null;
@@ -37,11 +39,17 @@ public class CategoryServiceImpl implements CategoryService {
 				foundCategory.setName(category.getName());
 				foundCategory.setDescription(category.getDescription());
 				foundCategory.setModifiedDate(new Date(System.currentTimeMillis()));
+				foundCategory.setModifiedBy(username);
 				return categoryRepository.save(foundCategory);
 		}
 
 		@Override
-		public void delete(long id) {
+		public boolean delete(Long id) {
+				Category foundCategory = categoryRepository.findById(id).orElse(null);
+				if (foundCategory == null) {
+						return false;
+				}
 				categoryRepository.deleteById(id);
+				return true;
 		}
 }

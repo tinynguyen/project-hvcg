@@ -18,7 +18,7 @@ import java.util.List;
 @JsonIdentityInfo(
 								generator = ObjectIdGenerators.PropertyGenerator.class,
 								property = "id")
-public class User extends BaseModel {
+public class User extends AbstractModel {
 
 		@Column(name = "full_name", nullable = false)
 		private String fullName;

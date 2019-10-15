@@ -16,36 +16,34 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
 
-		private final long ROLE_USER_ID = 1L;
-
 		@Autowired
 		private UserRepository userRepository;
 
 		@Autowired
 		private RoleRepository roleRepository;
 
+		@Autowired
+		private PasswordEncoder passwordEncoder;
+
 		@Override
 		public List<User> findAll() {
 				return userRepository.findAll();
 		}
 
-		@Autowired
-		private PasswordEncoder passwordEncoder;
-
 		@Override
-		public User save(User user) {
-				Role role = roleRepository.findById(ROLE_USER_ID).orElse(null);
+		public User save(User user, Long roleId) {
+				Role role = roleRepository.findById(roleId).orElse(null);
 				List<Role> roles = new ArrayList<>();
 				roles.add(role);
 				user.setRoles(roles);
-				user.setCreatedBy(user.getUsername()); // ???
+				user.setCreatedBy(user.getUsername());
 				user.setCreatedDate(new Date(System.currentTimeMillis()));
 				user.setPassword(passwordEncoder.encode(user.getPassword()));
 				return userRepository.save(user);
 		}
 
 		@Override
-		public User update(User user, long id) {
+		public User update(User user, Long id) {
 				User foundUser = userRepository.findById(id).orElse(null);
 				if (foundUser == null) {
 						return null;
@@ -53,18 +51,21 @@ public class UserServiceImpl implements UserService {
 				foundUser.setFullName(user.getFullName());
 				foundUser.setUsername(user.getUsername());
 				foundUser.setEmail(user.getEmail());
-				foundUser.setPassword(user.getPassword());
+				foundUser.setPassword(passwordEncoder.encode(user.getPassword()));
 				foundUser.setAvatar(user.getAvatar());
+				foundUser.setModifiedDate(new Date(System.currentTimeMillis()));
+				foundUser.setModifiedBy(user.getUsername());
 				return userRepository.save(foundUser);
 		}
 
 		@Override
-		public User delete(long id) {
+		public boolean delete(Long id) {
 				User foundUser = userRepository.findById(id).orElse(null);
 				if (foundUser == null) {
-						return null;
+						return false;
 				}
 				foundUser.setEnabled(0);
-				return userRepository.save(foundUser);
+				userRepository.save(foundUser);
+				return true;
 		}
 }

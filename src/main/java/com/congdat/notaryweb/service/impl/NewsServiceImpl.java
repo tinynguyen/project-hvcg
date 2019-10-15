@@ -38,7 +38,7 @@ public class NewsServiceImpl implements NewsService {
 		}
 
 		@Override
-		public News update(News news, long newsId, String username) {
+		public News update(News news, Long newsId, String username) {
 				News foundNews = newsRepository.findById(newsId).orElse(null);
 				if (foundNews == null) {
 						return null;
@@ -53,7 +53,12 @@ public class NewsServiceImpl implements NewsService {
 		}
 
 		@Override
-		public void delete(long id) {
+		public boolean delete(Long id) {
+				News foundNews = newsRepository.findById(id).orElse(null);
+				if (foundNews == null) {
+						return false;
+				}
 				newsRepository.deleteById(id);
+				return true;
 		}
 }
